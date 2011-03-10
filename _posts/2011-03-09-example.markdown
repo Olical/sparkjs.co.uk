@@ -1,8 +1,0 @@
----
-layout: default
-title: Example
-description: Example
-keywords: Example
-categories: test
----
-A post
