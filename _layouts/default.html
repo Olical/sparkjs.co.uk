@@ -11,6 +11,36 @@
 	</head>
 	
 	<body>
-		{{ content }}
+		<div class='wrapper'>
+			<header>
+				<h1><a href='/'>Spark JavaScript library</a></h1>
+			</header>
+		</div>
+		
+		<nav>
+			<div class='wrapper'>
+				<ul>
+					<li class='home selected'><a href='/'>home</a></li>
+					<li class='download'><a href='/download'>download</a></li>
+					<li class='documentation'><a href='/documentation'>documentation</a></li>
+					<li class='discussion'><a href='http://groups.google.com/group/sparkjs'>discussion</a></li>
+				</ul>
+			</div>
+		</nav>
+		
+		<div class='wrapper'>
+			<div class='content'>
+				{{ page.content }}
+			</div>
+			
+			<br class='clear' />
+			
+			<footer>
+				<p>&copy; 2011 <a href='http://flowdev.co.uk/'>Oliver Caldwell</a></p>
+			</footer>
+		</div>
+		
+		<script type='text/javascript' src='/assets/javascript/spark.js'></script>
+		<script type='text/javascript' src='/assets/javascript/main.js'></script>
 	</body>
 </html>
