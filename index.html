@@ -1,0 +1,19 @@
+---
+layout: default
+title: Hello, World!
+description: Jekyll template
+keywords: jekyll, template, hello world
+---
+<p>All posts</p>
+<ul>
+{% for post in site.posts %}
+	<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+
+<p>All in category 'test'</p>
+<ul>
+  {% for category, post in site.categories['test'] %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
