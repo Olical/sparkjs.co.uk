@@ -41,3 +41,208 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* Text */
+p, li, h1, h2, h3, h4, h5, h6 {
+	font-family: helvetica, arial, sans-serif;
+	color: #686868;
+	font-weight: lighter;
+}
+
+h3 {
+	font-size: 22px;
+	margin: 35px 0 20px 0;
+}
+
+span.light {
+	color: #BEBEBE;
+	}
+	span.light a {
+		color: #BEBEBE;
+	}
+
+p {
+	line-height: 23px;
+	margin: 0 0 20px 0;
+}
+
+a {
+	color: #107FC9;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* Page */
+body {
+	background: 0 0 url(/assets/images/noise.png) transparent repeat;
+}
+
+/* Wrapper */
+div.wrapper {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+/* Header */
+header {
+	width: 100%;
+	height: 105px;
+	}
+	header h1 {
+		width: 298px;
+		height: 72px;
+		margin: 30px 0 0 15px;
+		display: block;
+		background: 0 0 url(/assets/images/logo.png) transparent no-repeat;
+		}
+		header h1 a {
+			width: 298px;
+			height: 0px;
+			padding: 72px 0 0 0;
+			overflow: hidden;
+			display: block;
+		}
+
+/* Navigation */
+nav {
+	width: 100%;
+	height: 43px;
+	background: 0 0 url(/assets/images/nav-background.png) transparent repeat-x;
+	}
+	nav li {
+		float: left;
+		height: 43px;
+		display: block;
+		}
+		nav li a {
+			height: 0;
+			padding: 43px 0 0 0;
+			overflow: hidden;
+			display: block;
+		}
+	nav li.home {
+		width: 102px;
+		background: 0 0 url(/assets/images/nav-buttons.png) transparent no-repeat;
+	}
+	nav li.home:hover, nav li.home.selected {
+		background-position: 0 -43px;
+	}
+	nav li.download {
+		width: 136px;
+		background: -102px 0 url(/assets/images/nav-buttons.png) transparent no-repeat;
+	}
+	nav li.download:hover, nav li.download.selected {
+		background-position: -102px -43px;
+	}
+	nav li.documentation {
+		width: 182px;
+		background: -238px 0 url(/assets/images/nav-buttons.png) transparent no-repeat;
+	}
+	nav li.documentation:hover, nav li.documentation.selected {
+		background-position: -238px -43px;
+	}
+	nav li.discussion {
+		width: 138px;
+		background: -420px 0 url(/assets/images/nav-buttons.png) transparent no-repeat;
+	}
+	nav li.discussion:hover, nav li.discussion.selected {
+		background-position: -420px -43px;
+	}
+
+/* Footer */
+footer {
+	width: 100%;
+	height: 50px;
+	border-top: 1px dotted #C3C3C3;
+	margin: 30px 0 30px 0;
+	clear: both;
+	}
+	footer p {
+		width: 100%;
+		height: 100%;
+		line-height: 50px;
+		text-align: right;
+	}
+
+/* Content */
+div.content {
+	width: 100%;
+	margin: 30px 0 0 0;
+}
+
+/* Focus */
+div.focus {
+	width: 100%;
+	height: 347px;
+	background: 0 0 url(/assets/images/focus-background.png) transparent no-repeat;
+	}
+	div.focus div.container {
+		width: 546px;
+		height: 277px;
+		margin: 35px 0 0 28px;
+		float: left;
+	}
+	div.focus div.container-right {
+		width: 294px;
+		height: 277px;
+		margin: 35px 32px 0 100px;
+		float: right;
+		text-align: center;
+	}
+	div.focus h2 {
+		width: 465px;
+		height: 0;
+		padding: 21px 0 0 0;
+		overflow: hidden;
+		display: block;
+		background: 0 0 url(/assets/images/focus-heading.png) transparent no-repeat;
+		margin: 0 0 20px 0;
+	}
+
+/* Clear fix */
+br.clear {
+	clear: both;
+}
+
+/* Main content */
+div.main {
+	margin: 30px 0 0 0;
+	}
+	div.main div.left {
+		width: 574px;
+		float: left;
+	}
+	div.main div.right {
+		width: 38%;
+		float: right;
+		min-height: 531px;
+		background: 0 0 url(/assets/images/sidebar-background.png) transparent no-repeat;
+		}
+		div.main div.right div.container {
+			width: 294px;
+			margin: 0 32px 0 100px;
+			float: right;
+		}
+
+/* Tweet list */
+#tweetlist {
+	display: none;
+}
+
+/* Learn by example */
+#lbe {
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	width: 50px;
+	height: 50px;
+	background-color: #666666;
+	margin: 0 0 20px 0;
+	cursor: pointer;
+	}
+	#lbe p {
+		display: none;
+		color: #FFFFFF;
+	}
