@@ -20,9 +20,9 @@
 		<nav>
 			<div class='wrapper'>
 				<ul>
-					<li class='home selected'><a href='/'>home</a></li>
-					<li class='download'><a href='/download'>download</a></li>
-					<li class='documentation'><a href='/documentation'>documentation</a></li>
+					<li class='home{% if page.url == '/index.html' %} selected{% endif %}'><a href='/'>home</a></li>
+					<li class='download{% if page.url == '/download.html' %} selected{% endif %}'><a href='/download.html'>download</a></li>
+					<li class='documentation{% if page.url == '/documentation.html' %} selected{% endif %}'><a href='/documentation.html'>documentation</a></li>
 					<li class='discussion'><a href='http://groups.google.com/group/sparkjs'>discussion</a></li>
 				</ul>
 			</div>
