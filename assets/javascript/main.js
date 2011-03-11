@@ -42,6 +42,9 @@ function displayTweets(data) {
 
 // Wait until the DOM is ready
 Spark.ready(function() {
+	// Highlight code
+	prettyPrint();
+	
 	// Initiate the jsonp for the tweets
 	Spark.jsonp('http://search.twitter.com/search.json', 'displayTweets', 'q=from%3ASparkJavaScript&rpp=5');
 	
