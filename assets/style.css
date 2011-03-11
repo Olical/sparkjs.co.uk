@@ -75,6 +75,11 @@ a:hover {
 	text-decoration: underline;
 }
 
+strong {
+	font-weight: normal;
+	color: #666666;
+}
+
 /* Page */
 body {
 	background: 0 0 url(/assets/images/noise.png) transparent repeat;
