@@ -1,0 +1,31 @@
+---
+layout: default
+title: html
+description: Manipulate the html content of the specified elements.
+keywords: spark, documentation, html
+categories: documentation
+---
+<h3>Spark(string <strong>selector</strong>, element <strong>context</strong>).html(string <strong>html</strong>, boolean <strong>append</strong>)</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>element - The CSS selector string to your element.</li>
+	<li>context - If supplied, the context in which you wish the selection to take place.</li>
+	<li>html - The html you wish to replace or append the elements inner html with.</li>
+	<li>append - If true the new content will be appended to the current content.</li>
+</ul>
+
+<h3>Returns</h3>
+<p>If the html is not set then the inner html of the element will be returned.</p>
+
+<h3>Examples</h3>
+
+<p>Change the html of p tags with a class of 'change' to say 'Hello, World!' in bold text.</p>
+<pre class='prettyprint lang-js'>
+Spark('p.change').html('&lt;strong&gt;Hello, World!&lt;/strong&gt;');
+</pre>
+
+<p>Append an italic pipe character to every p tag.</p>
+<pre class='prettyprint lang-js'>
+Spark('p').text(' &lt;em&gt;|&lt;/em&gt;', true);
+</pre>
