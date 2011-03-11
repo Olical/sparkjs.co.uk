@@ -1,0 +1,35 @@
+---
+layout: default
+title: cookie
+description: Set or retrieve a cookie's content.
+keywords: spark, documentation, cookie
+categories: documentation
+---
+<h3>Spark.cookie(string <strong>name</strong>, string <strong>content</strong>, integer <strong>duration</strong>)</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>name - The name of your cookie.</li>
+	<li>content - The content you wish to set.</li>
+	<li>duration - The duration of your cookie in milliseconds.</li>
+</ul>
+
+<h3>Returns</h3>
+<p>If the content is not set then the content of the cookie will be returned. If the cookie does not exist then it will return false.</p>
+
+<h3>Examples</h3>
+
+<p>Get the contents of a cookie.</p>
+<pre class='prettyprint lang-js'>
+Spark.cookie('myCookie');
+</pre>
+
+<p>Create a cookie that lasts until the user closes their browser.</p>
+<pre class='prettyprint lang-js'>
+Spark.cookie('myCookie', 'Hello, World!');
+</pre>
+
+<p>Create a cookie that lasts for 30 seconds, which happens to be 30000 milliseconds.</p>
+<pre class='prettyprint lang-js'>
+Spark.cookie('myCookie', 'Hello, World!', 30000);
+</pre>
