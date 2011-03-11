@@ -42,14 +42,6 @@ function displayTweets(data) {
 
 // Wait until the DOM is ready
 Spark.ready(function() {
-	// Initiate Disqus
-	var disqus_shortname = 'sparkjs';
-	(function() {
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
-	
 	// Initiate the jsonp for the tweets
 	Spark.jsonp('http://search.twitter.com/search.json', 'displayTweets', 'q=from%3ASparkJavaScript&rpp=5');
 	
