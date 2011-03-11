@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title>{{ page.title }}</title>
+		<meta name='description' content='{{ page.description }}' />
+		<meta name='keywords' content='{{ page.keywords }}' />
+		<meta name='author' content='Oliver Caldwell' />
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+		<!--[if lt IE 9]><script type='text/javascript' src='/assets/javascript/html5.js'></script><![endif]-->
+		<link rel='stylesheet' type='text/css' href='/assets/style.css' />
+	</head>
+	
+	<body>
+		<div class='wrapper'>
+			<header>
+				<h1><a href='/'>Spark JavaScript library</a></h1>
+			</header>
+		</div>
+		
+		<nav>
+			<div class='wrapper'>
+				<ul>
+					<li class='home{% if page.url == '/index.html' %} selected{% endif %}'><a href='/'>home</a></li>
+					<li class='download{% if page.url == '/download.html' %} selected{% endif %}'><a href='/download.html'>download</a></li>
+					<li class='documentation{% if page.url == '/documentation.html' %} selected{% endif %}'><a href='/documentation.html'>documentation</a></li>
+					<li class='discussion'><a href='http://groups.google.com/group/sparkjs'>discussion</a></li>
+				</ul>
+			</div>
+		</nav>
+		
+		<div class='wrapper'>
+			<div class='content'>
