@@ -273,3 +273,13 @@ ul.full {
 		background-color: #F2F2F2;
 		display: block;
 	}
+
+/* Code blocks */
+pre.prettyprint {
+	margin: 0 0 60px 0;
+}
+
+/* Disqus */
+div#disqus_thread {
+	padding: 30px 0 0 0;
+}
