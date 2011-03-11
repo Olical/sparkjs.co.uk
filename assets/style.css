@@ -262,6 +262,7 @@ div.main {
 /* Full page lists */
 ul.full {
 	width: 100%;
+	margin: 0 !important;
 	}
 	ul.full li {
 		width: 960px;
