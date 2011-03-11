@@ -216,6 +216,13 @@ br.clear {
 div.main {
 	margin: 30px 0 0 0;
 	}
+	div.main ul {
+		margin: 5px 0 5px 30px;
+		}
+		div.main ul li {
+			list-style: disc inside;
+			margin: 5px 0 5px 0;
+		}
 	div.main div.left {
 		width: 574px;
 		float: left;
