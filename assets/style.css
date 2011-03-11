@@ -246,3 +246,13 @@ div.main {
 		display: none;
 		color: #FFFFFF;
 	}
+
+/* Full page lists */
+ul.full {
+	width: 100%;
+	}
+	ul.full li {
+		width: 960px;
+		padding: 20px;
+		background-color: #F2F2F2;
+	}
