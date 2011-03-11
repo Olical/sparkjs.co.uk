@@ -267,4 +267,5 @@ ul.full {
 		width: 960px;
 		padding: 20px;
 		background-color: #F2F2F2;
+		display: block;
 	}
