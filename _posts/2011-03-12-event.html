@@ -1,0 +1,61 @@
+---
+layout: default
+title: event
+description: Cause a function to be run when a certain event occurs.
+keywords: spark, documentation, event
+categories: documentation
+---
+<h3>Spark(string <strong>element</strong>, element <strong>context</strong>).event(string <strong>type</strong>, function <strong>callback</strong>)</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>element - The CSS selector string to your element.</li>
+	<li>context - If supplied, the context in which you wish the selection to take place.</li>
+	<li>
+		type - The type of event that has to take place in order for it to be triggered. Possible types are as follows.
+		<ul>
+			<li>load</li>
+			<li>unload</li>
+			<li>blur</li>
+			<li>change</li>
+			<li>focus</li>
+			<li>reset</li>
+			<li>select</li>
+			<li>submit</li>
+			<li>abort</li>
+			<li>keydown</li>
+			<li>keypress</li>
+			<li>keyup</li>
+			<li>click</li>
+			<li>dblclick</li>
+			<li>mousedown</li>
+			<li>mousemove</li>
+			<li>mouseout</li>
+			<li>mouseover</li>
+			<li>mouseup</li>
+		</ul>
+	</li>
+	<li>callback - The function you wish to be run when the element is clicked, passes the event to the callback function.</li>
+</ul>
+
+<h3>Returns</h3>
+<p>Passes the event's return to the callback. For events such as click you can get the clicks location with pageX and pageY. This is usually not cross browser but Spark fixes this on runtime so you can use one value for all browsers.</p>
+
+<p>The same fixes apply to the target / srcElement differences in some browsers. You just need to use event.target because Spark fixes these differences.</p>
+
+<h3>Examples</h3>
+
+<p>Set a click event with a callback function.</p>
+<pre class='prettyprint lang-js'>
+Spark('a.myButton').event('click', function(e) {
+    alert('pageX = ' + e.pageX);
+});
+</pre>
+
+<p>Set a click event on a link and prevent it from changing the page by returning false.</p>
+<pre class='prettyprint lang-js'>
+Spark('a.myButton').event('click', function(e) {
+    console.log('This browser is not going anywhere!');
+    return false;
+});
+</pre>
