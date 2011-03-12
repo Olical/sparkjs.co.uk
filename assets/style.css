@@ -84,6 +84,10 @@ strong {
 	color: #666666;
 }
 
+pre.prettyprint {
+	padding: 10px;
+}
+
 /* Page */
 body {
 	background: 0 0 url(/assets/images/noise.png) transparent repeat;
