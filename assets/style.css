@@ -46,7 +46,7 @@ table {
 }
 
 /* Text */
-p, li, h1, h2, h3, h4, h5, h6 {
+p, li, h1, h2, h3, h4, h5, h6, pre {
 	font-family: helvetica, arial, sans-serif;
 	color: #686868;
 	font-weight: lighter;
@@ -55,6 +55,7 @@ p, li, h1, h2, h3, h4, h5, h6 {
 h3 {
 	font-size: 22px;
 	margin: 40px 0 15px 0;
+	color: #990000;
 }
 
 span.light {
