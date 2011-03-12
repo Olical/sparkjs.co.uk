@@ -3,7 +3,7 @@
 	{{ page.content }}
 	<ul class='full'>
 		{% for post in site.categories.downloads %}
-		<li>{{ post.title }} | <a href='/assets/downloads/Spark-{{ post.title }}.min.js'>minified</a> &middot; <a href='/assets/downloads/Spark-{{ post.title }}.js'>production</a></li>
+		<li><span class='light'>{{ post.title }}</span> | <a href='/assets/downloads/Spark-{{ post.title }}.min.js'>minified</a> &middot; <a href='/assets/downloads/Spark-{{ post.title }}.js'>production</a></li>
 		{% endfor %}
 	</ul>
 </div>
