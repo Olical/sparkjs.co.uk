@@ -102,6 +102,8 @@ strong {
 
 pre.prettyprint {
 	padding: 10px;
+	border-color: #996666;
+	background-color: #FFFFFF;
 }
 
 /* Page */
