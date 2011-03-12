@@ -87,12 +87,11 @@ p {
 }
 
 a {
-	color: #107FC9;
-	text-decoration: none;
+	color: #996666;
 }
 
 a:hover {
-	text-decoration: underline;
+	color: #992222;
 }
 
 strong {
