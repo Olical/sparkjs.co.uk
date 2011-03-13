@@ -2,7 +2,7 @@
 <div class='main'>
 	{{ page.content }}
 	<ul class='full'> 				
-		{% gallery name:. dir:documentation format:html %}                    
+		{% gallery dir:documentation format:html %}                    
 	   		<li><a href="{{ file.path }}">{{ file.title }}</a> | <span class='light'>{{ file.description }}</span></li> 
 		{% endgallery %}
 	</ul>
