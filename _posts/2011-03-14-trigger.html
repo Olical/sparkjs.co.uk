@@ -1,0 +1,52 @@
+---
+layout: default
+title: trigger
+description: Trigger an event manually.
+keywords: spark, documentation, trigger
+categories: documentation
+---
+<h3 class='anatomy'>Spark(string <strong>element</strong>, object <strong>context</strong>).trigger(string <strong>type</strong>)</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>element - The CSS selector string to your element.</li>
+	<li>context - If supplied, the context in which you wish the selection to take place.</li>
+	<li>
+		type - The type of event you wish to trigger, it can be one of the following
+		<ul>
+			<li>load</li>
+			<li>unload</li>
+			<li>blur</li>
+			<li>change</li>
+			<li>focus</li>
+			<li>reset</li>
+			<li>select</li>
+			<li>submit</li>
+			<li>abort</li>
+			<li>keydown</li>
+			<li>keypress</li>
+			<li>keyup</li>
+			<li>click</li>
+			<li>dblclick</li>
+			<li>mousedown</li>
+			<li>mousemove</li>
+			<li>mouseout</li>
+			<li>mouseover</li>
+			<li>mouseup</li>
+		</ul>
+	</li>
+</ul>
+
+<h3>Returns</h3>
+<p>Nothing.</p>
+
+<h3>Examples</h3>
+
+<p>Set a click event on an element and then trigger it.</p>
+<pre class='prettyprint lang-js'>
+Spark('div.button').event('click', function(e) {
+    alert('Button clicked.');
+});
+
+Spark('div.button').trigger('click');
+</pre>
