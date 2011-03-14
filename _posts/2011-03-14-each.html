@@ -1,0 +1,27 @@
+---
+layout: default
+title: each
+description: Run a function repeatedly passing each element returned by the selector engine.
+keywords: spark, documentation, each
+categories: documentation
+---
+<h3 class='anatomy'>Spark(string <strong>element</strong>, object <strong>context</strong>).each(function <strong>callback</strong>)</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>element - The CSS selector string to your element.</li>
+	<li>context - If supplied, the context in which you wish the selection to take place.</li>
+	<li>callback - The function you wish to be run with the element passed to it.</li>
+</ul>
+
+<h3>Returns</h3>
+<p>Nothing.</p>
+
+<h3>Examples</h3>
+
+<p>Set the title of every p tag</p>
+<pre class='prettyprint lang-js'>
+Spark('p').each(function(e) {
+    e.title = 'Set via the each function';
+});
+</pre>
