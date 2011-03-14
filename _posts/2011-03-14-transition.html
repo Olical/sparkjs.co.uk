@@ -1,0 +1,54 @@
+---
+layout: default
+title: transition
+description: Show or hide an element with a specified transition, timeframe and callback.
+keywords: spark, documentation, transition
+categories: documentation
+---
+<h3 class='anatomy'>Spark(string <strong>element</strong>, object <strong>context</strong>).transition(string <strong>method</strong>, integer <strong>timeframe</strong>, string <strong>easing</strong>, function <strong>callback</strong>)</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>element - The CSS selector string to your element.</li>
+	<li>context - If supplied, the context in which you wish the selection to take place.</li>
+	<li>
+		method - The transition you wish to take place, please use one of the following.
+		<ul>
+			<li>slidedown</li>
+			<li>slideup</li>
+			<li>fadein</li>
+			<li>fadeout</li>
+			<li>sneakin</li>
+			<li>sneakout</li>
+		</ul>
+	</li>
+	<li>
+		easing - The easing method to use, if false, it defaults to outQuad. All methods must be prepended with 'in', 'out' or 'inOut'.
+		<ul>
+			<li>Quad</li>
+			<li>Cubic</li>
+			<li>Quart</li>
+			<li>Quint</li>
+			<li>Sine</li>
+			<li>Expo</li>
+			<li>Circ</li>
+			<li>Elastic</li>
+			<li>Back</li>
+			<li>Bounce</li>
+		</ul>
+	</li>
+	<li>timeframe - The amount of time you wish it to take place over.</li>
+	<li>callback - The function you wish to be run on completion.</li>
+</ul>
+
+<h3>Returns</h3>
+<p>Nothing.</p>
+
+<h3>Examples</h3>
+
+<p>Fade an element out then slide it down with a bouncing effect.</p>
+<pre class='prettyprint lang-js'>
+Spark('div.alert').transition('fadeout', 400, false, function() {
+    Spark('div.alert').transition('slidedown', 500, 'outBounce');
+});
+</pre>
