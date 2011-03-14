@@ -1,0 +1,25 @@
+---
+layout: default
+title: fixEvent
+description: Makes the object returned in an event cross browser. (Executed by default)
+keywords: spark, documentation, fixEvent
+categories: documentation
+---
+<h3 class='anatomy'>Spark.fixEvent(object <strong>event</strong>)</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>event - The event to be made cross browser.</li>
+</ul>
+
+<h3>Returns</h3>
+<p>Returns the changed event object that has had its values altered to be cross browser, these include the pageX/Y problem with IE and the target/srcElement problem, also with IE. So you can use target and pageX/Y with no fear.</p>
+
+<h3>Examples</h3>
+
+<p>Make an event passed by a click tag cross browser.</p>
+<pre class='prettyprint lang-js'>
+function clickHandler(e) {
+    e = Spark.fixEvent(e);
+}
+</pre>
