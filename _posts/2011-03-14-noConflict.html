@@ -1,0 +1,26 @@
+---
+layout: default
+title: noConflict
+description: Stop conflation between other $ variables.
+keywords: spark, documentation, noConflict
+categories: documentation
+---
+<h3 class='anatomy'>Spark.noConflict()</h3>
+
+<h3>Parameters</h3>
+<p>None.</p>
+
+<h3>Returns</h3>
+<p>Returns an instance of the Spark object.</p>
+
+<h3>Examples</h3>
+
+<p>Revert the $ variable back to how it was before Spark arrived.</p>
+<pre class='prettyprint lang-js'>
+Spark.noConflict();
+</pre>
+
+<p>Revert the $ variable but reinitiate it under a different alias.</p>
+<pre class='prettyprint lang-js'>
+window.$S = Spark.noConflict();
+</pre>
