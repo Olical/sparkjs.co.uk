@@ -1,0 +1,45 @@
+---
+layout: default
+title: ajax
+description: Get or post data via synchronous or asynchronous AJAX.
+keywords: spark, documentation, ajax
+categories: documentation
+---
+<h3 class='anatomy'>Spark.ajax(string <strong>method</strong>, string <strong>file</strong>, string <strong>data</strong>, function <strong>callback</strong>)</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>method - The method in which you want the data to be sent, can either be 'post' or 'get'. It is not case sensitive.</li>
+	<li>file - The name of the file you want the data to be sent to.</li>
+	<li>data - The data you wish to be sent. If set to false then nothing will be sent.</li>
+	<li>callback - The function to be called when the request completes. If set then it becomes an asynchronous request.</li>
+</ul>
+
+<h3>Returns</h3>
+<p>Returns the contents of the file. If the request failed then it returns false.</p>
+
+<h3>Examples</h3>
+
+<p>Post data to a file and show its output.</p>
+<pre class='prettyprint lang-js'>
+var data = Spark.ajax('post', 'myFile.php', 'name=Oliver Caldwell&age=17')
+
+if(data) {
+    alert('File contains: ' + data);
+}
+else {
+    // An error occurred
+}
+</pre>
+
+<p>Get a file and show it via an asynchronous request.</p>
+<pre class='prettyprint lang-js'>
+Spark.ajax('get', 'someFile.txt', false, function(data) {
+    if(data) {
+        alert('File contains: ' + data);
+    }
+    else {
+        // An error occurred
+    }
+});
+</pre>
