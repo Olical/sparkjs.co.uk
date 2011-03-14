@@ -1,0 +1,51 @@
+---
+layout: default
+title: animate
+description: Animate any CSS property with a set timeframe, easing method and callback.
+keywords: spark, documentation, jsonp
+categories: documentation
+---
+<h3 class='anatomy'>Spark(string <strong>element</strong>, object <strong>context</strong>).animate(object <strong>properties</strong>, integer <strong>timeframe</strong>, string <strong>easing</strong>, function <strong>callback</strong>)</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>element - The CSS selector string to your element.</li>
+	<li>context - If supplied, the context in which you wish the selection to take place.</li>
+	<li>properties - The properties you wish to animate and the value you wish it to animate to.</li>
+	<li>timeframe - The amount of milliseconds you wish the animation to take.</li>
+	<li>
+		easing - The easing method to use, if false, it defaults to outQuad. All methods must be prepended with 'in', 'out' or 'inOut'.
+		<ul>
+			<li>Quad</li>
+			<li>Cubic</li>
+			<li>Quart</li>
+			<li>Quint</li>
+			<li>Sine</li>
+			<li>Expo</li>
+			<li>Circ</li>
+			<li>Elastic</li>
+			<li>Back</li>
+			<li>Bounce</li>
+		</ul>
+	</li>
+	<li>callback - The function you wish to be run on completion.</li>
+</ul>
+
+<h3>Returns</h3>
+<p>Nothing.</p>
+
+<h3>Examples</h3>
+
+<p>Animate elements opacity to 0.5 over two seconds and alert when done with an elastic easing.</p>
+<pre class='prettyprint lang-js'>
+Spark('p').animate({opacity: 0.5}, 2000, 'inElastic', function() {
+    alert('Done');
+});
+</pre>
+
+<p>Animate elements to 20 pixels in width with the default timeframe and easing. When done run a callback.</p>
+<pre class='prettyprint lang-js'>
+Spark('div').animate({width: 20}, false, false, function() {
+    alert('Done');
+});
+</pre>
