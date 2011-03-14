@@ -301,6 +301,8 @@ ul.full {
 /* Code blocks */
 pre.prettyprint {
 	margin: 0 0 60px 0;
+	line-height: 20px;
+	font-family: courier new;;
 }
 
 /* Disqus */
