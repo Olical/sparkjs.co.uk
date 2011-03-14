@@ -1,0 +1,34 @@
+---
+layout: default
+title: data
+description: Set or retrieve mixed data to a specified element.
+keywords: spark, documentation, data
+categories: documentation
+---
+<h3 class='anatomy'>Spark.data(object <strong>element</strong>, string <strong>name</strong>, mixed <strong>data</strong>)</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>element - The element you wish to assign data to.</li>
+	<li>name - The name you wish to assign your data to, so you can retrieve it.</li>
+	<li>data - The data to wish to assign, this can be anything.</li>
+</ul>
+
+<h3>Returns</h3>
+<p>If no data parameter is provided, it returns the content of the specified section.</p>
+
+<h3>Examples</h3>
+
+<p>Save a string to a clicked div tag.</p>
+<pre class='prettyprint lang-js'>
+Spark('div').event('click', function(e) {
+    Spark.data(e, 'dataName', 'dataContent');
+});
+</pre>
+
+<p>Display the stored data in a clicked div tag.</p>
+<pre class='prettyprint lang-js'>
+Spark('div').event('click', function(e) {
+    alert(Spark.data(e, 'dataName'));
+});
+</pre>
