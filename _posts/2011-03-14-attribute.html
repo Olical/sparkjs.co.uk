@@ -1,0 +1,32 @@
+---
+layout: default
+title: attribute
+description: Set or retrieve attributes of elements.
+keywords: spark, documentation, attribute
+categories: documentation
+---
+<h3 class='anatomy'>Spark(string <strong>element</strong>, object <strong>context</strong>).attribute(object <strong>properties</strong>)</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>element - The CSS selector string to your element.</li>
+	<li>context - If supplied, the context in which you wish the selection to take place.</li>
+	<li>properties - The properties you wish to assign.</li>
+</ul>
+
+<h3>Returns</h3>
+<p>Returns all of the properties of the element if the properties argument is not passed. It basically just returns the element object.</p>
+
+<h3>Examples</h3>
+
+<p>Set the title of all paragraph tags.</p>
+<pre class='prettyprint lang-js'>
+Spark('p.example').attribute({
+    title: 'Hello, World!'
+});
+</pre>
+
+<p>Get the title of a paragraph tag.</p>
+<pre class='prettyprint lang-js'>
+alert(Spark('p.example').attribute().title);
+</pre>
