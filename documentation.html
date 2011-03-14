@@ -4,3 +4,36 @@ title: Spark JavaScript library documentation
 description: The documentation for the Spark JavaScript library's functions arguments, returns and examples.
 keywords: spark, javascript, library, documentation, examples, returns, arguments
 ---
+<p>Each documentation page contains the anatomy, parameters, return values and examples of the specified function.</p>
+
+<p>Most functions can be chained, the only ones that can't are functions such as <a href='/documentation/ajax.html'>ajax</a> which do not involve elements. When chaining animations they are run one after the other, like so.</p>
+
+<pre class='prettyprint lang-js'>
+Spark('div.something')
+    .animate({width: 50})
+    .animate({opacity: 0.5});
+</pre>
+
+<p>You can also add your own functions via plugins. Here is a plugin template for you to copy and adapt.</p>
+
+<pre class='prettyprint lang-js'>
+SparkFn.pluginName = function(argument) {
+    // Set up any variables
+    var element = null,
+        e = null;
+    
+    // Loop through all of the elements
+    for(e in this.elements) {
+        // Grab the current element
+        element = this.elements[e];
+        
+        // Alter the element variable
+    }
+    
+    // Return the Spark object to allow chaining
+    return this;
+};
+
+// Reinitialise Spark
+SparkIn();
+</pre>
