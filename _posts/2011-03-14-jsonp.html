@@ -1,0 +1,29 @@
+---
+layout: default
+title: jsonp
+description: Load an external JSONP script with a callback and parameters.
+keywords: spark, documentation, jsonp
+categories: documentation
+---
+<h3 class='anatomy'>Spark.jsonp(string <strong>file</strong>, string <strong>callback</strong>, string <strong>parameters</strong>)</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>file - The path to the file you wish to load.</li>
+	<li>callback - The name of the function you wish the data to be passed to.</li>
+	<li>parameters - Any other parameters you may need to pass to the file.</li>
+</ul>
+
+<h3>Returns</h3>
+<p>Nothing.</p>
+
+<h3>Examples</h3>
+
+<p>Load and display a tweet from @OliverCaldwell.</p>
+<pre class='prettyprint lang-js'>
+Spark.jsonp('http://search.twitter.com/search.json', 'loaded', 'q=from%3AOliverCaldwell');
+
+window.loaded = function(data) {
+    Spark('p.target').html(data.results[0].text);
+}
+</pre>
