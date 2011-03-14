@@ -1,0 +1,6 @@
+# Turn on URL rewriting
+RewriteEngine On
+
+# Canonical redirect redirect - http://www.sparkjs.co.uk/ -> http://sparkjs.co.uk/
+RewriteCond %{HTTP_HOST} !^sparkjs\.co\.uk$
+RewriteRule (.*) http://sparkjs.co.uk/$1 [R=301,L]
