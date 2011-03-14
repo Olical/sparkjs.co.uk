@@ -1,0 +1,27 @@
+---
+layout: default
+title: json
+description: Encode or decode JSON data.
+keywords: spark, documentation, json
+categories: documentation
+---
+<h3 class='anatomy'>Spark.json(string <strong>method</strong>, mixed <strong>data</strong>)</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>method - What you want to do with the data, either encode or decode.</li>
+	<li>data - The data you wish to decode or encode.</li>
+</ul>
+
+<h3>Returns</h3>
+<p>The encoded or decoded data.</p>
+
+<h3>Examples</h3>
+
+<p>Encode some data and display it.</p>
+<pre class='prettyprint lang-js'>
+alert(Spark.json('encode', {
+    name: 'Oliver Caldwell',
+    age: 17
+}));
+</pre>
