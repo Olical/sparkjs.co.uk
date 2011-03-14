@@ -1,0 +1,32 @@
+---
+layout: default
+title: client
+description: Get the clients browser and OS information.
+keywords: spark, documentation, client
+categories: documentation
+---
+<h3 class='anatomy'>Spark.client()</h3>
+
+<h3>Parameters</h3>
+<p>None.</p>
+
+<h3>Returns</h3>
+<p>Returns an object containing the following values.</p>
+<ul>
+	<li>browser - The name of the browser.</li>
+	<li>version - The version of the browser.</li>
+	<li>os - The operating system that the browser is running on.</li>
+</ul>
+
+<h3>Examples</h3>
+
+<p>Get all of the information on the client and display it.</p>
+<pre class='prettyprint lang-js'>
+var client = Spark.client();
+
+Spark('p.browser').html(
+    'You are using ' + client.browser +
+    ' version ' + client.version +
+    ' on ' + client.os
+);
+</pre>
