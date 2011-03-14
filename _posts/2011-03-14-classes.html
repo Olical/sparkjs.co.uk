@@ -1,0 +1,37 @@
+---
+layout: default
+title: classes
+description: Add, remove or check for the existence of a certain class on an element.
+keywords: spark, documentation, classes
+categories: documentation
+---
+<h3 class='anatomy'>Spark(string <strong>element</strong>, object <strong>context</strong>).classes(string <strong>method</strong>, string <strong>class</strong>)</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>element - The CSS selector string to your element.</li>
+	<li>context - If supplied, the context in which you wish the selection to take place.</li>
+	<li>method - The method you wish the function to execute. Add, remove or has.</li>
+	<li>class - The class name you wish to add, remove or check for its existence.</li>
+</ul>
+
+<h3>Returns</h3>
+<p>If you use the has method then it returns true if it does have the class and false if it does not.</p>
+
+<h3>Examples</h3>
+
+<p>Check if an element has the selected class.</p>
+<pre class='prettyprint lang-js'>
+var hasClass = Spark('p#anId').classes('has', 'selected');
+console.log(hasClass ? 'Yes' : 'No');
+</pre>
+
+<p>Add the class of selected to an element.</p>
+<pre class='prettyprint lang-js'>
+Spark('p#anId').classes('add', 'selected');
+</pre>
+
+<p>Remove the class of selected from an element.</p>
+<pre class='prettyprint lang-js'>
+Spark('p#anId').classes('remove', 'selected');
+</pre>
