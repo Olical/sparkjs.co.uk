@@ -1,0 +1,32 @@
+---
+layout: default
+title: css
+description: Manipulate the style property of the specified elements.
+keywords: spark, documentation, css
+categories: documentation
+---
+<h3 class='anatomy'>Spark(string <strong>element</strong>, object <strong>context</strong>).css(object <strong>properties</strong>)</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>element - The CSS selector string to your element.</li>
+	<li>context - If supplied, the context in which you wish the selection to take place.</li>
+	<li>properties - The CSS properties you wish to assign.</li>
+</ul>
+
+<h3>Returns</h3>
+<p>Returns all of the CSS properties of the element if no properties are supplied.</p>
+
+<h3>Examples</h3>
+
+<p>Set the colour of all paragraph tags to red.</p>
+<pre class='prettyprint lang-js'>
+Spark('p').css({
+    color: '#FF0000'
+});
+</pre>
+
+<p>Get the colour of a specific p tag</p>
+<pre class='prettyprint lang-js'>
+alert(Spark('p#postDescription').css().color);
+</pre>
