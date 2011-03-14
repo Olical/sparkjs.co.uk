@@ -293,8 +293,9 @@ ul.full {
 	ul.full li {
 		width: 960px;
 		padding: 20px;
-		background-color: #F2F2F2;
+		background-color: #EEEEEE;
 		display: block;
+		border: 1px solid #DDDDDD;
 	}
 
 /* Code blocks */
