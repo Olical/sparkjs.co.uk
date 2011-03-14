@@ -1,0 +1,74 @@
+---
+layout: default
+title: element
+description: Insert, prepend, append or remove an element from the specified elements.
+keywords: spark, documentation, element
+categories: documentation
+---
+<h3 class='anatomy'>Spark(string <strong>element</strong>, object <strong>context</strong>).element(string <strong>method</strong>, string <strong>tag name</strong>, object <strong>attributes</strong>, object <strong>styles</strong>, function <strong>callback</strong>)</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>element - The CSS selector string to your element.</li>
+	<li>context - If supplied, the context in which you wish the selection to take place.</li>
+	<li>
+		method - The action you want to take place, it can be one of the following.
+		<ul>
+			<li>insert</li>
+			<li>append</li>
+			<li>prepend</li>
+			<li>remove</li>
+		</ul>
+	</li>
+	<li>tag name - The type of tag you wish to create, such as 'div' or 'p'.</li>
+	<li>attributes - An object of attributes to assign to the element such as 'innerHTML'.</li>
+	<li>styles - An object of style you wish to apply to the element such as 'color' or 'text-decoration'.</li>
+	<li>callback - The function you wish the array of inserted elements references to be passed to.</li>
+</ul>
+
+<h3>Returns</h3>
+<p>Nothing.</p>
+
+<h3>Examples</h3>
+
+<p>Add an empty p tag to every div.</p>
+<pre class='prettyprint lang-js'>
+Spark('div').element('insert', 'p');
+</pre>
+
+<p>Add a p tag with the content 'Hello, World!' to every div.</p>
+<pre class='prettyprint lang-js'>
+Spark('div').element('insert', 'p', {
+    innerHTML: 'Hello, World!'
+});
+</pre>
+
+<p>Add a p tag with content and an underline to every div.</p>
+<pre class='prettyprint lang-js'>
+Spark('div').element('insert', 'p', {
+    innerHTML: 'Hello, World!'
+}, {
+    'text-decoration': 'underline'
+});
+</pre>
+
+
+<p>Insert a p tag after every div.</p>
+<pre class='prettyprint lang-js'>
+Spark('div').element('append', 'p');
+</pre>
+
+<p>Insert a p tag before every div and log the tags that where added.</p>
+<pre class='prettyprint lang-js'>
+Spark('div').element('prepend', 'p', false, false, function(elements) {
+    for(var i = 0; i &lt; elements.length; i++) {
+        console.log(elements[i])
+    }
+});
+</pre>
+
+
+<p>Remove every p tag.</p>
+<pre class='prettyprint lang-js'>
+Spark('p').element('remove');
+</pre>
