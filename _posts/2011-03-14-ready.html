@@ -1,0 +1,25 @@
+---
+layout: default
+title: ready
+description: Run a specified function when the DOM is ready.
+keywords: spark, documentation, ready
+categories: documentation
+---
+<h3 class='anatomy'>Spark.ready(function <strong>callback</strong>)</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>callback - The function you wish to be run when the DOM is finished loading.</li>
+</ul>
+
+<h3>Returns</h3>
+<p>Nothing.</p>
+
+<h3>Examples</h3>
+
+<p>Display an alert after the DOM has finished loading.</p>
+<pre class='prettyprint lang-js'>
+Spark.ready(function() {
+    alert('DOM Ready');
+});
+</pre>
