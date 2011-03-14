@@ -1,0 +1,24 @@
+---
+layout: default
+title: computed
+description: Get the computed styles of a specified element.
+keywords: spark, documentation, computed
+categories: documentation
+---
+<h3 class='anatomy'>Spark(string <strong>element</strong>, object <strong>context</strong>).computed()</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>element - The element you wish to assign data to.</li>
+	<li>name - The name you wish to assign your data to, so you can retrieve it.</li>
+</ul>
+
+<h3>Returns</h3>
+<p>Returns an object containing all of the computed styles of the specified element.</p>
+
+<h3>Examples</h3>
+
+<p>Get the computed width of an element.</p>
+<pre class='prettyprint lang-js'>
+alert(Spark('p').computed().width);
+</pre>
