@@ -46,7 +46,7 @@ Spark.ready(function() {
 	prettyPrint();
 	
 	// Initiate the jsonp for the tweets
-	Spark.jsonp('http://api.twitter.com/1/statuses/user_timeline.json', 'displayTweets', 'screen_name=SparkJavaScript');
+	Spark.jsonp('http://api.twitter.com/1/statuses/user_timeline.json', 'displayTweets', 'screen_name=SparkJavaScript&count=5');
 	
 	// Listen for the learn by example click
 	Spark('#lbe').event('click', function(e) {
