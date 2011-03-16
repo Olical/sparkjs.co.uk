@@ -25,7 +25,7 @@ SparkIn();
 // Set up the function to handle the jsonp response
 function displayTweets(data) {
 	// Pull out the tweets and set up other variables
-	var tweets = data.results,
+	var tweets = data,
 		i = null;
 	
 	// Loop through the tweets
@@ -46,7 +46,7 @@ Spark.ready(function() {
 	prettyPrint();
 	
 	// Initiate the jsonp for the tweets
-	Spark.jsonp('http://search.twitter.com/search.json', 'displayTweets', 'q=from%3ASparkJavaScript&rpp=5');
+	Spark.jsonp('http://api.twitter.com/1/statuses/user_timeline.json', 'displayTweets', 'screen_name=SparkJavaScript');
 	
 	// Listen for the learn by example click
 	Spark('#lbe').event('click', function(e) {
