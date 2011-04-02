@@ -1,0 +1,62 @@
+---
+layout: default
+title: toggle
+description: Show or hide an element depending if it is already visible with a specified transition.
+keywords: spark, documentation, toggle
+categories: documentation
+---
+<h3 class='anatomy'>Spark(string <strong>element</strong>, object <strong>context</strong>).toggle(string <strong>method</strong>, integer <strong>timeframe</strong>, string <strong>easing</strong>, function <strong>callback</strong>)</h3>
+
+<h3>Parameters</h3>
+<ul>
+	<li>element - The CSS selector string to your element.</li>
+	<li>context - If supplied, the context in which you wish the selection to take place.</li>
+	<li>
+		method - The transition you wish to take place, please use one of the following.
+		<ul>
+			<li>slide</li>
+			<li>fade</li>
+			<li>sneak</li>
+			<li>visibility (the same as not passing it at all)</li>
+		</ul>
+	</li>
+	<li>
+		easing - The easing method to use, if false, it defaults to outQuad. All methods must be prepended with 'in', 'out' or 'inOut'.
+		<ul>
+			<li>Quad</li>
+			<li>Cubic</li>
+			<li>Quart</li>
+			<li>Quint</li>
+			<li>Sine</li>
+			<li>Expo</li>
+			<li>Circ</li>
+			<li>Elastic</li>
+			<li>Back</li>
+			<li>Bounce</li>
+		</ul>
+	</li>
+	<li>timeframe - The amount of time you wish it to take place over.</li>
+	<li>callback - The function you wish to be run on completion.</li>
+</ul>
+
+<h3>Returns</h3>
+<p>Nothing.</p>
+
+<h3>Examples</h3>
+
+<p>Toggle the visibility of an element with no animation.</p>
+<pre class='prettyprint lang-js'>
+Spark('p.switch').toggle();
+</pre>
+
+<p>Toggle the visibility of an element with a fading animation.</p>
+<pre class='prettyprint lang-js'>
+Spark('p.switch').toggle('fade');
+</pre>
+
+<p>Toggle the visibility of an element with a sliding animation, default easing, default timeframe and a callback..</p>
+<pre class='prettyprint lang-js'>
+Spark('p.switch').toggle('slide', false, false, function() {
+	console.log('Finished');
+});
+</pre>
