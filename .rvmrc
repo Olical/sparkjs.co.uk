@@ -1,0 +1,2 @@
+rvm gemset create 'spark-website' 
+rvm gemset use 'spark-website'
